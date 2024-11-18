@@ -26,21 +26,6 @@ const Projects = () => {
         <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg">
           <h2 className="text-3xl font-bold text-indigo-900 mb-6">
             <Link
-              href="/projects/personal"
-              className="text-indigo-600 hover:underline"
-            >
-              Personal Projects
-            </Link>
-          </h2>
-          <p className="text-lg leading-relaxed">
-            Projects I have worked on independently, reflecting my passion for
-            coding and exploring new technologies.
-          </p>
-        </div>
-
-        <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg">
-          <h2 className="text-3xl font-bold text-indigo-900 mb-6">
-            <Link
               href="/projects/labrys"
               className="text-indigo-600 hover:underline"
             >
@@ -53,6 +38,21 @@ const Projects = () => {
           <p className="text-lg leading-relaxed">
             Projects I contributed to during my time at Labrys, focusing on
             real-world applications and professional development.
+          </p>
+        </div>
+
+        <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg">
+          <h2 className="text-3xl font-bold text-indigo-900 mb-6">
+            <Link
+              href="/projects/personal"
+              className="text-indigo-600 hover:underline"
+            >
+              Personal Projects
+            </Link>
+          </h2>
+          <p className="text-lg leading-relaxed">
+            Projects I have worked on independently, reflecting my passion for
+            coding and exploring new technologies.
           </p>
         </div>
       </div>
