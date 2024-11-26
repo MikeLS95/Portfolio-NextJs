@@ -47,31 +47,35 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl bg-gray-900/95 border-gray-700 [&>button]:text-purple-100 [&>button]:hover:text-purple-200 [&>button]:transition-colors [&>button]:bg-gray-800/50 [&>button]:p-1.5 [&>button]:rounded-full">
+      <DialogContent className="max-w-[95vw] md:max-w-2xl h-[90vh] md:h-auto overflow-y-auto bg-gray-900/95 border-gray-700 [&>button]:text-purple-100 [&>button]:hover:text-purple-200 [&>button]:transition-colors [&>button]:bg-gray-800/50 [&>button]:p-1.5 [&>button]:rounded-full mx-4">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-purple-100 mb-4">
+          <DialogTitle className="text-xl md:text-2xl font-bold text-purple-100 mb-4">
             {project.title}
           </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-6">
-          <p className="text-gray-300">{project.description}</p>
+        <div className="space-y-4 md:space-y-6">
+          <p className="text-sm md:text-base text-gray-300">
+            {project.description}
+          </p>
 
           <div>
             <h4 className="text-sm font-medium text-purple-200 uppercase tracking-wider mb-2">
               Tech Stack:
             </h4>
-            <ul className="list-disc list-inside text-gray-300 space-y-1 pl-4">
+            <ul className="list-disc list-inside text-sm md:text-base text-gray-300 space-y-1 pl-4">
               {project.techStack.map((tech, index) => (
-                <li key={index}>{tech}</li>
+                <li key={index} className="break-words">
+                  {tech}
+                </li>
               ))}
             </ul>
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center gap-3 md:gap-4 pt-2">
             <Link
               href={project.githubLink}
-              className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors"
+              className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors text-center text-sm md:text-base"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -80,7 +84,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
             {project.demoLink && (
               <Link
                 href={project.demoLink}
-                className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
+                className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors text-center text-sm md:text-base"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -93,7 +97,6 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
     </Dialog>
   );
 };
-
 const Projects: React.FC = () => {
   const workProjects: Project[] = [
     {
