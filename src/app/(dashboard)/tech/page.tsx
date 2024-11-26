@@ -13,7 +13,7 @@ type TechnologyItemProps = {
 };
 
 const TechnologyItem: React.FC<TechnologyItemProps> = ({ name, iconSrc }) => (
-  <li className="flex items-center justify-center space-x-2">
+  <li className="flex items-center justify-center space-x-3 p-2">
     {iconSrc && (
       <Image
         src={`/techIcons/${iconSrc}`}
@@ -23,7 +23,7 @@ const TechnologyItem: React.FC<TechnologyItemProps> = ({ name, iconSrc }) => (
         className="w-6 h-6"
       />
     )}
-    <span>{name}</span>
+    <span className="text-gray-300">{name}</span>
   </li>
 );
 
@@ -33,11 +33,11 @@ type TechSectionProps = {
 };
 
 const TechSection: React.FC<TechSectionProps> = ({ title, technologies }) => (
-  <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg">
-    <h2 className="text-3xl font-bold text-indigo-900 mb-6 text-center">
+  <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
+    <h2 className="text-2xl font-bold text-purple-100 mb-6 text-center">
       {title}
     </h2>
-    <ul className="space-y-2 text-lg leading-relaxed">
+    <ul className="space-y-3 text-lg leading-relaxed">
       {technologies.map((tech, index) => (
         <TechnologyItem key={index} {...tech} />
       ))}
@@ -46,7 +46,7 @@ const TechSection: React.FC<TechSectionProps> = ({ title, technologies }) => (
 );
 
 const TechStack: React.FC = () => {
-  const sections: { title: string; technologies: Technology[] }[] = [
+  const sections = [
     {
       title: "Frontend Technologies",
       technologies: [
@@ -129,34 +129,34 @@ const TechStack: React.FC = () => {
   ];
 
   return (
-    <div className="text-gray-900 max-w-6xl mx-auto px-6 py-16">
+    <div className="max-w-6xl mx-auto px-6 py-16">
       <h1 className="text-5xl font-extrabold text-center mb-12 text-purple-100">
         Technology Stack
       </h1>
-      <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg mb-8">
-        <p className="text-lg leading-relaxed text-center">
+      <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20 mb-8">
+        <p className="text-lg leading-relaxed text-center mb-6 text-gray-300">
           Explore the different technologies used in our projects, including
           frontend and backend frameworks, databases, authentication methods,
           and various tools for development, deployment, and communication.
         </p>
-        <p>
-          Icons by
+        <p className="text-center text-gray-400 flex items-center justify-center gap-2">
+          Icons by{" "}
           <Link
             href="https://icons8.com/"
-            className="text-xl font-semibold text-indigo-800 mb-3 text-center"
+            className="text-purple-300 hover:text-purple-200 transition-colors inline-flex items-center"
             target="_blank"
             rel="noopener noreferrer"
           >
             Icons8
           </Link>
-          ,
+          {" and "}
           <Link
-            href="https://icons8.com/"
-            className="text-xl font-semibold text-indigo-800 mb-3 text-center"
+            href="https://www.flaticon.com/free-icons/favicon"
+            className="text-purple-300 hover:text-purple-200 transition-colors inline-flex items-center"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Icons8
+            Favicon
           </Link>
         </p>
       </div>

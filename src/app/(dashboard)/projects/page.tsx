@@ -29,12 +29,12 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
     <Dialog>
       <DialogTrigger asChild>
         <div className="cursor-pointer flex flex-col items-center w-full group relative">
-          <h3 className="text-xl font-semibold text-indigo-800 mb-3 group-hover:text-indigo-600">
+          <h3 className="text-xl font-semibold text-purple-100 mb-3 group-hover:text-purple-300">
             {project.title}
           </h3>
           <div className="w-full aspect-video relative rounded-lg overflow-hidden">
-            <div className="absolute top-2 right-2 z-10 bg-white/80 p-2 rounded-full">
-              <Maximize2 className="w-4 h-4 text-indigo-600" />
+            <div className="absolute top-2 right-2 z-10 bg-black/20 p-2 rounded-full backdrop-blur-sm">
+              <Maximize2 className="w-4 h-4 text-purple-100" />
             </div>
             <Image
               src={project.image}
@@ -46,21 +46,21 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl">
+      <DialogContent className="max-w-2xl bg-gray-900/95 border-gray-700 [&>button]:text-purple-100 [&>button]:hover:text-purple-200 [&>button]:transition-colors [&>button]:bg-gray-800/50 [&>button]:p-1.5 [&>button]:rounded-full">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-indigo-900 mb-4">
+          <DialogTitle className="text-2xl font-bold text-purple-100 mb-4">
             {project.title}
           </DialogTitle>
         </DialogHeader>
 
         <div className="space-y-6">
-          <p className="text-gray-700">{project.description}</p>
+          <p className="text-gray-300">{project.description}</p>
 
           <div>
-            <h4 className="text-sm font-medium text-indigo-600 uppercase tracking-wider mb-2">
+            <h4 className="text-sm font-medium text-purple-200 uppercase tracking-wider mb-2">
               Tech Stack:
             </h4>
-            <ul className="list-disc list-inside text-gray-700 space-y-1 pl-4">
+            <ul className="list-disc list-inside text-gray-300 space-y-1 pl-4">
               {project.techStack.map((tech, index) => (
                 <li key={index}>{tech}</li>
               ))}
@@ -70,7 +70,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
           <div className="flex justify-center">
             <Link
               href={project.githubLink}
-              className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors"
+              className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -205,18 +205,18 @@ const Projects: React.FC = () => {
     },
   ];
   return (
-    <div className="text-gray-900 max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-5xl font-extrabold text-center mb-12 text-purple-200">
+    <div className="max-w-6xl mx-auto px-6 py-16">
+      <h1 className="text-5xl font-extrabold text-center mb-12 text-purple-100">
         My Projects
       </h1>
 
       <div className="flex flex-col gap-8">
-        <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg mb-8">
-          <p className="text-lg leading-relaxed mb-4 text-center">
+        <div className="mb-8">
+          <p className="text-lg leading-relaxed mb-4 text-center text-gray-300">
             Below are all of the projects I have worked on over the course of my
             career.
           </p>
-          <p className="text-lg leading-relaxed text-center">
+          <p className="text-lg leading-relaxed text-center text-gray-300">
             Click on project titles to view more details about each project.
           </p>
         </div>
@@ -224,15 +224,15 @@ const Projects: React.FC = () => {
 
       <div className="flex flex-col gap-8">
         {/* Work Projects Section */}
-        <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg">
-          <h2 className="text-3xl font-bold text-indigo-900 mb-6 text-center">
+        <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
+          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
             Work Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {workProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col items-center"
+                className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
               >
                 <ProjectDialog project={project} />
               </div>
@@ -241,15 +241,15 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Personal Projects Section */}
-        <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg">
-          <h2 className="text-3xl font-bold text-indigo-900 mb-6 text-center">
+        <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
+          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
             Personal Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {personalProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col items-center"
+                className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
               >
                 <ProjectDialog project={project} />
               </div>
@@ -258,15 +258,15 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Coder Academy Projects Section */}
-        <div className="bg-white shadow-lg p-8 border border-gray-200 rounded-lg">
-          <h2 className="text-3xl font-bold text-indigo-900 mb-6 text-center">
+        <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
+          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
             Coder Academy Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {coderAcademyProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col items-center"
+                className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
               >
                 <ProjectDialog project={project} />
               </div>
