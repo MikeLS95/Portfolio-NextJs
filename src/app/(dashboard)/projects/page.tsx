@@ -16,6 +16,7 @@ type Project = {
   description: string;
   techStack: string[];
   githubLink: string;
+  demoLink?: string; // Optional demo link field
   image: string;
   imageAlt: string;
 };
@@ -67,7 +68,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
             </ul>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4">
             <Link
               href={project.githubLink}
               className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors"
@@ -76,6 +77,16 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
             >
               View on GitHub
             </Link>
+            {project.demoLink && (
+              <Link
+                href={project.demoLink}
+                className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Demo
+              </Link>
+            )}
           </div>
         </div>
       </DialogContent>
@@ -102,6 +113,7 @@ const Projects: React.FC = () => {
         "Vercel: Hosting platform for deploying the application.",
       ],
       githubLink: "https://github.com/MikeLS95/pump.task",
+      demoLink: "https://pump-task-dev.vercel.app/",
       image: "/projects/PumpDotTask.JPG",
       imageAlt: "Pump.Task Project Interface",
     },
@@ -117,6 +129,7 @@ const Projects: React.FC = () => {
         "Vercel: Hosting platform for deploying the application.",
       ],
       githubLink: "https://github.com/MikeLS95/Tech-assessment",
+      demoLink: "https://coin-display.vercel.app/",
       image: "/projects/CoinDisplay.JPG",
       imageAlt: "Tech Assessment Project Interface",
     },
@@ -153,6 +166,7 @@ const Projects: React.FC = () => {
         "Netlify: Hosts and deploys the website, ensuring accessibility and performance.",
       ],
       githubLink: "https://github.com/MikeLS95/Portfolio",
+      demoLink: "https://mikels-portfolio.netlify.app/home",
       image: "/projects/FirstPortfolio.JPG",
       imageAlt: "First Portfolio Project Interface",
     },
@@ -200,6 +214,7 @@ const Projects: React.FC = () => {
         "Render: Deployment platform used to host the backend services, ensuring efficient server operations.",
       ],
       githubLink: "https://github.com/MikeLS95/Pawfect-Care",
+      demoLink: "https://pawfect-care.netlify.app/",
       image: "/projects/PawfectCare.JPG",
       imageAlt: "Pawfect Care Project Interface",
     },
