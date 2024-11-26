@@ -6,7 +6,6 @@ import {
   User,
   Briefcase,
   Code,
-  Phone,
   FileText,
   Mail,
 } from "lucide-react";
@@ -53,7 +52,7 @@ const Home = () => {
             <span>Resume</span>
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto mb-8">
+        <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-8">
           <Link
             href="/aboutme"
             className="p-6 rounded-lg bg-purple-800/30 backdrop-blur-sm hover:bg-purple-700/40 transition-colors flex flex-col items-center gap-2 text-white"
@@ -74,13 +73,6 @@ const Home = () => {
           >
             <Code className="w-6 h-6" />
             <span>Tech Stack</span>
-          </Link>
-          <Link
-            href="/contact"
-            className="p-6 rounded-lg bg-purple-800/30 backdrop-blur-sm hover:bg-purple-700/40 transition-colors flex flex-col items-center gap-2 text-white"
-          >
-            <Phone className="w-6 h-6" />
-            <span>Contact</span>
           </Link>
         </div>
         <div className="text-center">
