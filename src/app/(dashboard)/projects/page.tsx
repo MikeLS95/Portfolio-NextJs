@@ -102,7 +102,7 @@ const Projects: React.FC = () => {
         "Vercel: Hosting platform for deploying the application.",
       ],
       githubLink: "https://github.com/MikeLS95/pump.task",
-      image: "/projects/PumpDotTask.JPG", // Replace with your actual image path
+      image: "/projects/PumpDotTask.JPG",
       imageAlt: "Pump.Task Project Interface",
     },
     {
@@ -117,7 +117,7 @@ const Projects: React.FC = () => {
         "Vercel: Hosting platform for deploying the application.",
       ],
       githubLink: "https://github.com/MikeLS95/Tech-assessment",
-      image: "/projects/CoinDisplay.JPG", // Replace with your actual image path
+      image: "/projects/CoinDisplay.JPG",
       imageAlt: "Tech Assessment Project Interface",
     },
   ];
@@ -135,7 +135,7 @@ const Projects: React.FC = () => {
         "Vercel: Hosting platform for deploying the website.",
       ],
       githubLink: "https://github.com/MikeLS95/Portfolio-NextJs",
-      image: "/projects/NextPortfolio.JPG", // Replace with your actual image path
+      image: "/projects/NextPortfolio.JPG",
       imageAlt: "Next.js Portfolio Project Interface",
     },
   ];
@@ -153,7 +153,7 @@ const Projects: React.FC = () => {
         "Netlify: Hosts and deploys the website, ensuring accessibility and performance.",
       ],
       githubLink: "https://github.com/MikeLS95/Portfolio",
-      image: "/projects/FirstPortfolio.JPG", // Replace with your actual image path
+      image: "/projects/FirstPortfolio.JPG",
       imageAlt: "First Portfolio Project Interface",
     },
     {
@@ -166,7 +166,7 @@ const Projects: React.FC = () => {
         "Figlet Module: A Python library utilized to generate the banner displayed in the game's menu.",
       ],
       githubLink: "https://github.com/MikeLS95/Escape-Room",
-      image: "/projects/EscapeRoom.JPG", // Replace with your actual image path
+      image: "/projects/EscapeRoom.JPG",
       imageAlt: "Escape Room Project Interface",
     },
     {
@@ -183,7 +183,7 @@ const Projects: React.FC = () => {
         "Bcrypt: Library for hashing passwords to enhance security.",
       ],
       githubLink: "https://github.com/MikeLS95/Customer-Profile-API",
-      image: "/projects/CustomerProfileAPI.JPG", // Replace with your actual image path
+      image: "/projects/CustomerProfileAPI.JPG",
       imageAlt: "Customer Profile API Interface",
     },
     {
@@ -200,7 +200,7 @@ const Projects: React.FC = () => {
         "Render: Deployment platform used to host the backend services, ensuring efficient server operations.",
       ],
       githubLink: "https://github.com/MikeLS95/Pawfect-Care",
-      image: "/projects/PawfectCare.JPG", // Replace with your actual image path
+      image: "/projects/PawfectCare.JPG",
       imageAlt: "Pawfect Care Project Interface",
     },
   ];
@@ -228,15 +228,20 @@ const Projects: React.FC = () => {
           <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
             Work Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {workProjects.map((project, index) => (
-              <div
-                key={index}
-                className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
-              >
-                <ProjectDialog project={project} />
-              </div>
-            ))}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-purple-200 mb-6 text-center">
+              Labrys
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {workProjects.map((project, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
+                >
+                  <ProjectDialog project={project} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

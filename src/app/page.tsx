@@ -1,21 +1,19 @@
 import Link from "next/link";
 import React from "react";
-import { Github, Linkedin, User, Briefcase, Code, Phone } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  User,
+  Briefcase,
+  Code,
+  Phone,
+  FileText,
+  Mail,
+} from "lucide-react";
 
 const Home = () => {
   return (
-    <div
-      className="
-      min-h-screen
-      bg-gradient-to-br
-      from-purple-900
-      to-purple-600
-      p-4
-      flex
-      flex-col
-      items-center
-      justify-center"
-    >
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-purple-600 p-4 flex flex-col items-center justify-center">
       <div className="w-full max-w-4x1">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
@@ -26,7 +24,7 @@ const Home = () => {
             Full Stack Developer | Problem Solver | Tech Enthusiast
           </p>
         </div>
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
           <Link
             href="https://github.com/MikeLS95"
             target="_blank"
@@ -45,8 +43,17 @@ const Home = () => {
             <Linkedin className="w-5 h-5" />
             <span>LinkedIn</span>
           </Link>
+          <Link
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-2 rounded-md bg-purple-800/50 text-white hover:bg-purple-700/50 transition-colors"
+          >
+            <FileText className="w-5 h-5" />
+            <span>Resume</span>
+          </Link>
         </div>
-        <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
+        <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto mb-8">
           <Link
             href="/aboutme"
             className="p-6 rounded-lg bg-purple-800/30 backdrop-blur-sm hover:bg-purple-700/40 transition-colors flex flex-col items-center gap-2 text-white"
@@ -75,6 +82,15 @@ const Home = () => {
             <Phone className="w-6 h-6" />
             <span>Contact</span>
           </Link>
+        </div>
+        <div className="text-center">
+          <a
+            href="mailto:your.email@example.com"
+            className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors"
+          >
+            <Mail className="w-5 h-5" />
+            <span>Michaellaishleys@gmail.com</span>
+          </a>
         </div>
       </div>
     </div>

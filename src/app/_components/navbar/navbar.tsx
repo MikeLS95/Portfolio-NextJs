@@ -12,16 +12,18 @@ const NavBar = () => {
     { name: "About Me", href: "/aboutme" },
     { name: "Projects", href: "/projects" },
     { name: "Tech", href: "/tech" },
-    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Title */}
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-800">
+            <Link
+              href="/"
+              className="text-xl font-bold text-purple-100 hover:text-purple-200 transition-colors"
+            >
               Mike Sheppard - Portfolio
             </Link>
           </div>
@@ -32,7 +34,7 @@ const NavBar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm transition-colors"
+                className="text-gray-300 hover:text-purple-300 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-gray-800/50"
               >
                 {item.name}
               </Link>
@@ -43,7 +45,7 @@ const NavBar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-300 hover:bg-gray-800/50 focus:outline-none transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -53,13 +55,13 @@ const NavBar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg">
+        <div className="md:hidden bg-gray-900/95 backdrop-blur-sm border-t border-gray-800">
           <div className="max-w-7xl mx-auto px-2 pt-2 pb-3 space-y-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-purple-600 block px-3 py-2 text-base"
+                className="text-gray-300 hover:text-purple-300 block px-3 py-2 text-base font-medium rounded-md hover:bg-gray-800/50 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
