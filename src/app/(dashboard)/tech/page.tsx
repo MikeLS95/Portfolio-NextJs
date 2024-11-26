@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Technology = {
   name: string;
@@ -137,6 +138,26 @@ const TechStack: React.FC = () => {
           Explore the different technologies used in our projects, including
           frontend and backend frameworks, databases, authentication methods,
           and various tools for development, deployment, and communication.
+        </p>
+        <p>
+          Icons by
+          <Link
+            href="https://icons8.com/"
+            className="text-xl font-semibold text-indigo-800 mb-3 text-center"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Icons8
+          </Link>
+          ,
+          <Link
+            href="https://icons8.com/"
+            className="text-xl font-semibold text-indigo-800 mb-3 text-center"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Icons8
+          </Link>
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
