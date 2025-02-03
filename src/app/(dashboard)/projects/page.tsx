@@ -17,6 +17,7 @@ type Project = {
   techStack: string[];
   githubLink: string | null;
   demoLink?: string;
+  ytLink?: string;
   image: string;
   imageAlt: string;
 };
@@ -83,7 +84,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
                 View on GitHub
               </Link>
             ) : (
-              <span className="text-gray-400 text-sm md:text-base">
+              <span className="bg-gray-600 text-white px-4 py-2 rounded text-center text-sm md:text-base">
                 Repository not available
               </span>
             )}
@@ -95,6 +96,16 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
                 rel="noopener noreferrer"
               >
                 Live Demo
+              </Link>
+            )}
+            {project.ytLink && (
+              <Link
+                href={project.ytLink}
+                className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-900 transition-colors text-center text-sm md:text-base"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Youtube Demo
               </Link>
             )}
           </div>
@@ -177,7 +188,7 @@ const Projects: React.FC = () => {
           "Unity Cloud: Cloud-based version control and collaboration platform.",
         ],
         githubLink: null,
-        demoLink: "https://youtu.be/h6AmqrT5Jfs",
+        ytLink: "https://youtu.be/h6AmqrT5Jfs",
         image: "/projects/SettlersUntamed.JPG",
         imageAlt: "Settlers Untamed Game Interface",
       },
