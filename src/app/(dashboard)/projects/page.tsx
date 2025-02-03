@@ -16,7 +16,7 @@ type Project = {
   description: string;
   techStack: string[];
   githubLink: string | null;
-  demoLink?: string; // Optional demo link field
+  demoLink?: string;
   image: string;
   imageAlt: string;
 };
@@ -144,37 +144,45 @@ const Projects: React.FC = () => {
     },
   ];
 
-  const personalProjects: Project[] = [
-    {
-      title: "Next.js Portfolio",
-      description:
-        "Welcome to my portfolio! I built this website using Next.js to showcase my skills, projects, and professional experiences. This platform reflects who I am as a developer, highlighting my work and the technologies I'm passionate about. With the power of Next.js, I've ensured the site is fast, responsive, and provides a great user experience. Feel free to explore and learn more about what I've been working on!",
-      techStack: [
-        "Next.js: Framework for React with server-side rendering and static site generation.",
-        "React: JavaScript library for building user interfaces.",
-        "Tailwind CSS: Utility-first CSS framework for responsive design.",
-        "JavaScript/TypeScript: Core programming languages used in the app.",
-        "Vercel: Hosting platform for deploying the website.",
-      ],
-      githubLink: "https://github.com/MikeLS95/Portfolio-NextJs",
-      image: "/projects/NextPortfolio.JPG",
-      imageAlt: "Next.js Portfolio Project Interface",
-    },
-    {
-      title: "Settlers Untamed",
-      description:
-        "Settlers Untamed is an idle civilization builder where players oversee the growth and development of their settlement. Villagers autonomously gather resources, construct buildings, and expand the civilization, while players strategically manage upgrades and advancements. Science points can be collected and spent on technological upgrades to enhance efficiency, unlock new structures, and accelerate progress. Built with Unity6 and C#, this project focuses on creating an engaging idle gameplay loop with dynamic resource management and automation mechanics.",
-      techStack: [
-        "Unity6: Game engine for developing 2D and 3D games.",
-        "Unity Editor: Development environment for designing and testing the game.",
-        "C#: Programming language for game logic and mechanics.",
-        "Unity Cloud: Cloud-based version control and collaboration platform.",
-      ],
-      githubLink: null,
-      image: "/projects/SettlersUntamed.JPG",
-      imageAlt: "Settlers Untamed Game Interface",
-    },
-  ];
+  const personalProjects: {
+    webDevelopment: Project[];
+    gameDevelopment: Project[];
+  } = {
+    webDevelopment: [
+      {
+        title: "Next.js Portfolio",
+        description:
+          "This portfolio website showcases my skills, projects, and professional experiences. Built with Next.js, it is designed for high performance, responsiveness, and an engaging user experience.",
+        techStack: [
+          "Next.js: Framework for React with server-side rendering and static site generation.",
+          "React: JavaScript library for building user interfaces.",
+          "Tailwind CSS: Utility-first CSS framework for responsive design.",
+          "JavaScript/TypeScript: Core programming languages used in the app.",
+          "Vercel: Hosting platform for deploying the website.",
+        ],
+        githubLink: "https://github.com/MikeLS95/Portfolio-NextJs",
+        image: "/projects/NextPortfolio.JPG",
+        imageAlt: "Next.js Portfolio Project Interface",
+      },
+    ],
+    gameDevelopment: [
+      {
+        title: "Settlers Untamed",
+        description:
+          "Settlers Untamed is an idle civilization builder where players oversee the growth and development of their settlement. Built with Unity6 and C#, it focuses on creating an engaging idle gameplay loop with dynamic resource management and automation mechanics.",
+        techStack: [
+          "Unity6: Game engine for developing 2D and 3D games.",
+          "Unity Editor: Development environment for designing and testing the game.",
+          "C#: Programming language for game logic and mechanics.",
+          "Unity Cloud: Cloud-based version control and collaboration platform.",
+        ],
+        githubLink: null,
+        demoLink: "https://youtu.be/h6AmqrT5Jfs",
+        image: "/projects/SettlersUntamed.JPG",
+        imageAlt: "Settlers Untamed Game Interface",
+      },
+    ],
+  };
 
   const coderAcademyProjects: Project[] = [
     {
@@ -288,15 +296,39 @@ const Projects: React.FC = () => {
           <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
             Personal Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {personalProjects.map((project, index) => (
-              <div
-                key={index}
-                className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
-              >
-                <ProjectDialog project={project} />
-              </div>
-            ))}
+
+          {/* Web Development Projects */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-purple-200 mb-6 text-center">
+              Web Development
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
+              {personalProjects.webDevelopment.map((project, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
+                >
+                  <ProjectDialog project={project} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Game Development Projects */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-purple-200 mb-6 text-center">
+              Game Development
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
+              {personalProjects.gameDevelopment.map((project, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg p-6 hover:bg-gray-800/30 transition-colors flex flex-col items-center"
+                >
+                  <ProjectDialog project={project} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
