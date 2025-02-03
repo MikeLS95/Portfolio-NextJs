@@ -91,7 +91,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
             {project.demoLink && (
               <Link
                 href={project.demoLink}
-                className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors text-center text-sm md:text-base"
+                className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-900 transition-colors text-center text-sm md:text-base"
                 target="_blank"
                 rel="noopener noreferrer"
               >
