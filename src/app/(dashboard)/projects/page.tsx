@@ -15,7 +15,7 @@ type Project = {
   title: string;
   description: string;
   techStack: string[];
-  githubLink: string;
+  githubLink: string | null;
   demoLink?: string; // Optional demo link field
   image: string;
   imageAlt: string;
@@ -73,14 +73,20 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
           </div>
 
           <div className="flex flex-col md:flex-row justify-center gap-3 md:gap-4 pt-2">
-            <Link
-              href={project.githubLink}
-              className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors text-center text-sm md:text-base"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </Link>
+            {project.githubLink ? (
+              <Link
+                href={project.githubLink}
+                className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors text-center text-sm md:text-base"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </Link>
+            ) : (
+              <span className="text-gray-400 text-sm md:text-base">
+                Repository not available
+              </span>
+            )}
             {project.demoLink && (
               <Link
                 href={project.demoLink}
@@ -164,8 +170,7 @@ const Projects: React.FC = () => {
         "C#: Programming language for game logic and mechanics.",
         "Unity Cloud: Cloud-based version control and collaboration platform.",
       ],
-      githubLink:
-        "https://cloud.unity.com/home/organizations/16768246837908/projects/2a731fda-c46c-4328-8a95-c35549fbaafe/plastic-scm/organizations/16768246837908/repositories/Settlers%20Untamed%2FSettlers%20Untamed",
+      githubLink: null,
       image: "/projects/SettlersUntamed.JPG",
       imageAlt: "Settlers Untamed Game Interface",
     },
