@@ -154,6 +154,21 @@ const Projects: React.FC = () => {
       image: "/projects/NextPortfolio.JPG",
       imageAlt: "Next.js Portfolio Project Interface",
     },
+    {
+      title: "Settlers Untamed",
+      description:
+        "Settlers Untamed is an idle civilization builder where players oversee the growth and development of their settlement. Villagers autonomously gather resources, construct buildings, and expand the civilization, while players strategically manage upgrades and advancements. Science points can be collected and spent on technological upgrades to enhance efficiency, unlock new structures, and accelerate progress. Built with Unity6 and C#, this project focuses on creating an engaging idle gameplay loop with dynamic resource management and automation mechanics.",
+      techStack: [
+        "Unity6: Game engine for developing 2D and 3D games.",
+        "Unity Editor: Development environment for designing and testing the game.",
+        "C#: Programming language for game logic and mechanics.",
+        "Unity Cloud: Cloud-based version control and collaboration platform.",
+      ],
+      githubLink:
+        "https://cloud.unity.com/home/organizations/16768246837908/projects/2a731fda-c46c-4328-8a95-c35549fbaafe/plastic-scm/organizations/16768246837908/repositories/Settlers%20Untamed%2FSettlers%20Untamed",
+      image: "/projects/SettlersUntamed.JPG",
+      imageAlt: "Settlers Untamed Game Interface",
+    },
   ];
 
   const coderAcademyProjects: Project[] = [
