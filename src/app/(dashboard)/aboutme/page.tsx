@@ -47,19 +47,21 @@ const About = () => {
           </h2>
           <p className="text-lg leading-relaxed mb-6 text-center text-gray-300">
             Outside of coding, I spend most of my time with my family, enjoying
-            video games, or binge-watching shows on Netflix. I welcomed my first
-            child in 2024, and watching her grow has been one of the greatest
-            joys of my life.
+            video games, or exploring new technologies. In 2024, I welcomed my
+            first child, and watching her grow has been one of the greatest joys
+            of my life.
           </p>
           <p className="text-lg leading-relaxed mb-6 text-center text-gray-300">
-            When I have some spare time, I often find myself either coding or
-            gaming. One of my favorite games of all time is Rare's
-            Banjo-Kazooie, which I revisit every few years.
+            In my spare time, I focus on expanding my development skills,
+            particularly in game development. I have been working on a game
+            project in Unity6 with C# to gain hands-on experience in game
+            mechanics, physics, and design.
           </p>
           <p className="text-lg leading-relaxed text-center text-gray-300">
-            I enjoy a variety of game genres, including real-time strategy,
-            MMORPGs, and RPGs. Gaming and coding provide me with the perfect
-            blend of creativity, strategy, and challenge.
+            I have a strong interest in various game genres, including real-time
+            strategy, MMORPGs, and RPGs. Both coding and gaming provide me with
+            the perfect balance of creativity, strategy, and
+            problem-solving—elements that drive my passion for development.
           </p>
         </div>
       </div>
