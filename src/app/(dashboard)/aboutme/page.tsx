@@ -10,17 +10,19 @@ const About = () => {
         <p className="text-xl leading-relaxed mb-6 text-center text-gray-300">
           Hello! I am a software developer eager to start my career in tech. I'm
           enthusiastic about learning and continually growing my skills through
-          hands-on projects and collaboration.
+          hands-on projects, collaboration, and exploring new areas such as AI
+          development.
         </p>
         <p className="text-xl leading-relaxed mb-6 text-center text-gray-300">
           Feel free to browse the projects I've completed on my GitHub profile,
           or navigate to my projects page for an overview of my work and
-          experience.
+          experience. I’m particularly motivated to build knowledge in AI and
+          machine learning as I grow as a developer.
         </p>
         <p className="text-xl leading-relaxed text-center text-gray-300">
-          This portfolio showcases the technologies I have used in my projects
-          and those I am interested in exploring to further enhance my
-          development journey.
+          This portfolio showcases the technologies I have used in my projects,
+          along with areas I am interested in exploring further,such as AI and
+          intelligent systems, to enhance my future development journey.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -32,12 +34,14 @@ const About = () => {
             As a junior developer, I bring passion, a willingness to learn, and
             the determination to improve with every challenge. I consistently
             strive to refine my skills and stay up-to-date with the latest
-            technologies.
+            technologies, including emerging areas like AI development.
           </p>
           <p className="text-lg leading-relaxed text-center text-gray-300">
             I have experience working on projects independently, in a team of
             two, and in a five-person team, tackling challenges collaboratively
-            and with enthusiasm.
+            and with enthusiasm. I look forward to opportunities where I can
+            contribute to innovative projects, and eventually expand into AI as
+            I continue building my career.
           </p>
         </div>
 
@@ -55,13 +59,15 @@ const About = () => {
             In my spare time, I focus on expanding my development skills,
             particularly in game development. I have been working on a game
             project in Unity6 with C# to gain hands-on experience in game
-            mechanics, physics, and design.
+            mechanics, physics, and design, while also learning more about AI
+            concepts to prepare for future opportunities in this space.
           </p>
           <p className="text-lg leading-relaxed text-center text-gray-300">
             I have a strong interest in various game genres, including real-time
             strategy, MMORPGs, and RPGs. Both coding and gaming provide me with
-            the perfect balance of creativity, strategy, and
-            problem-solving—elements that drive my passion for development.
+            the perfect balance of creativity, strategy, and problem-solving,
+            and I am excited to see how AI can play a role in shaping the future
+            of both gaming and software development.
           </p>
         </div>
       </div>
