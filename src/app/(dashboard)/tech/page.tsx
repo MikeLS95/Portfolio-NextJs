@@ -34,7 +34,7 @@ type TechSectionProps = {
 
 const TechSection: React.FC<TechSectionProps> = ({ title, technologies }) => (
   <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
-    <h2 className="text-2xl font-bold text-purple-100 mb-6 text-center">
+    <h2 className="text-2xl font-bold text-cyan-300 mb-6 text-center">
       {title}
     </h2>
     <ul className="space-y-3 text-lg leading-relaxed">
@@ -130,7 +130,7 @@ const TechStack: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-5xl font-extrabold text-center mb-12 text-purple-100">
+      <h1 className="text-5xl font-extrabold text-center mb-12 text-cyan-300">
         Technology Stack
       </h1>
       <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20 mb-8">
@@ -143,7 +143,7 @@ const TechStack: React.FC = () => {
           Icons by{" "}
           <Link
             href="https://icons8.com/"
-            className="text-purple-300 hover:text-purple-200 transition-colors inline-flex items-center"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors inline-flex items-center"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -152,7 +152,7 @@ const TechStack: React.FC = () => {
           {" and "}
           <Link
             href="https://www.flaticon.com/free-icons/favicon"
-            className="text-purple-300 hover:text-purple-200 transition-colors inline-flex items-center"
+            className="text-cyan-400 hover:text-cyan-200 transition-colors inline-flex items-center"
             target="_blank"
             rel="noopener noreferrer"
           >

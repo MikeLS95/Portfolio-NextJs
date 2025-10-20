@@ -22,7 +22,7 @@ const NavBar = () => {
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-xl font-bold text-purple-100 hover:text-purple-200 transition-colors"
+              className="text-xl font-bold text-cyan-300 hover:text-cyan-200 transition-colors"
             >
               Mike Sheppard - Portfolio
             </Link>
@@ -34,7 +34,7 @@ const NavBar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-purple-300 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-gray-800/50"
+                className="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-gray-800/50"
               >
                 {item.name}
               </Link>
@@ -45,7 +45,7 @@ const NavBar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-300 hover:bg-gray-800/50 focus:outline-none transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 focus:outline-none transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -61,7 +61,7 @@ const NavBar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-purple-300 block px-3 py-2 text-base font-medium rounded-md hover:bg-gray-800/50 transition-colors"
+                className="text-gray-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium rounded-md hover:bg-gray-800/50 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-5xl font-extrabold text-center mb-12 text-purple-100">
+      <h1 className="text-5xl font-extrabold text-center mb-12 text-cyan-300">
         Michael (Mike) Sheppard
       </h1>
       <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20 mb-12 flex flex-col items-center">
@@ -27,7 +27,7 @@ const About = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20 flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-6 text-center">
             Why Am I a Fit for Your Company?
           </h2>
           <p className="text-lg leading-relaxed mb-6 text-center text-gray-300">
@@ -46,7 +46,7 @@ const About = () => {
         </div>
 
         <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20 flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-6 text-center">
             My Personal Life
           </h2>
           <p className="text-lg leading-relaxed mb-6 text-center text-gray-300">

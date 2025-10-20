@@ -9,7 +9,7 @@ export default function PageLayout({
 }) {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 to-purple-600">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800">
         <NavBar />
         <main className="pt-16 p-4">{children}</main>
       </div>

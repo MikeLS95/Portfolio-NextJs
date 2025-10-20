@@ -31,12 +31,12 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
     <Dialog>
       <DialogTrigger asChild>
         <div className="cursor-pointer flex flex-col items-center w-full group relative">
-          <h3 className="text-xl font-semibold text-purple-100 mb-3 group-hover:text-purple-300">
+          <h3 className="text-xl font-semibold text-cyan-300 mb-3 group-hover:text-cyan-400">
             {project.title}
           </h3>
           <div className="w-full aspect-video relative rounded-lg overflow-hidden">
             <div className="absolute top-2 right-2 z-10 bg-black/20 p-2 rounded-full backdrop-blur-sm">
-              <Maximize2 className="w-4 h-4 text-purple-100" />
+              <Maximize2 className="w-4 h-4 text-cyan-300" />
             </div>
             <Image
               src={project.image}
@@ -48,9 +48,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-w-[95vw] md:max-w-2xl h-[90vh] md:h-auto overflow-y-auto bg-gray-900/95 border-gray-700 [&>button]:text-purple-100 [&>button]:hover:text-purple-200 [&>button]:transition-colors [&>button]:bg-gray-800/50 [&>button]:p-1.5 [&>button]:rounded-full mx-4">
+      <DialogContent className="max-w-[95vw] md:max-w-2xl h-[90vh] md:h-auto overflow-y-auto bg-gray-900/95 border-gray-700 [&>button]:text-cyan-300 [&>button]:hover:text-cyan-200 [&>button]:transition-colors [&>button]:bg-gray-800/50 [&>button]:p-1.5 [&>button]:rounded-full mx-4">
         <DialogHeader>
-          <DialogTitle className="text-xl md:text-2xl font-bold text-purple-100 mb-4">
+          <DialogTitle className="text-xl md:text-2xl font-bold text-cyan-300 mb-4">
             {project.title}
           </DialogTitle>
         </DialogHeader>
@@ -263,7 +263,7 @@ const Projects: React.FC = () => {
   ];
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-5xl font-extrabold text-center mb-12 text-purple-100">
+      <h1 className="text-5xl font-extrabold text-center mb-12 text-cyan-300">
         My Projects
       </h1>
 
@@ -282,7 +282,7 @@ const Projects: React.FC = () => {
       <div className="flex flex-col gap-8">
         {/* Work Projects Section */}
         <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
-          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-6 text-center">
             Work Projects
           </h2>
           <div className="mb-8">
@@ -304,7 +304,7 @@ const Projects: React.FC = () => {
 
         {/* Personal Projects Section */}
         <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
-          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-6 text-center">
             Personal Projects
           </h2>
 
@@ -345,7 +345,7 @@ const Projects: React.FC = () => {
 
         {/* Coder Academy Projects Section */}
         <div className="border border-gray-800 rounded-lg p-8 backdrop-blur-sm bg-gray-900/20">
-          <h2 className="text-3xl font-bold text-purple-100 mb-6 text-center">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-6 text-center">
             Coder Academy Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
